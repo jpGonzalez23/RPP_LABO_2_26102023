@@ -11,6 +11,11 @@ namespace FrmView
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmView_Load(object sender, EventArgs e)
         {
             this.cmbTipo.Items.Add("Automovil");
@@ -20,6 +25,11 @@ namespace FrmView
             this.Refrescar();
         }
 
+        /// <summary>
+        /// Evento para fabricar un vehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFabricar_Click(object sender, EventArgs e)
         {
             Vehiculo nuevoVehiculo = this.CrearVehiculo();
@@ -28,6 +38,11 @@ namespace FrmView
             this.Refrescar();
         }
 
+        /// <summary>
+        /// Evento para eleminar un vehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (this.lstVehiculos.SelectedItem != null)
@@ -44,12 +59,19 @@ namespace FrmView
             }
         }
 
+        /// <summary>
+        /// Metodo para iniciar la fabricacion
+        /// </summary>
         private void IniciciarFabricacion()
         {
             this.fabrica = new Fabrica(5);
             Camioneta camioneta = new Camioneta(EPropulsion.Electrica, true);
         }
 
+        /// <summary>
+        /// Metodo para crear un vehiculo
+        /// </summary>
+        /// <returns>Retorna un vehiculo</returns>
         private Vehiculo CrearVehiculo()
         {
             string tipo = this.cmbTipo.SelectedItem.ToString();
@@ -67,6 +89,9 @@ namespace FrmView
             }
         }
 
+        /// <summary>
+        /// Metodo para refrescar el listbox
+        /// </summary>
         private void Refrescar()
         {
             this.lstVehiculos.DataSource = null;
