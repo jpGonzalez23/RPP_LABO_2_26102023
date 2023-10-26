@@ -45,14 +45,14 @@
             lstVehiculos.ItemHeight = 15;
             lstVehiculos.Location = new Point(12, 12);
             lstVehiculos.Name = "lstVehiculos";
-            lstVehiculos.Size = new Size(444, 319);
+            lstVehiculos.Size = new Size(610, 319);
             lstVehiculos.TabIndex = 0;
             // 
             // lblTipo
             // 
             lblTipo.AutoSize = true;
             lblTipo.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTipo.Location = new Point(472, 9);
+            lblTipo.Location = new Point(628, 12);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(178, 30);
             lblTipo.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Location = new Point(472, 42);
+            cmbTipo.Location = new Point(628, 45);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(178, 23);
             cmbTipo.TabIndex = 2;
@@ -70,7 +70,7 @@
             // pcbFabrica
             // 
             pcbFabrica.Image = (Image)resources.GetObject("pcbFabrica.Image");
-            pcbFabrica.Location = new Point(472, 71);
+            pcbFabrica.Location = new Point(628, 74);
             pcbFabrica.Name = "pcbFabrica";
             pcbFabrica.Size = new Size(178, 131);
             pcbFabrica.SizeMode = PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             // btnFabricar
             // 
             btnFabricar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFabricar.Location = new Point(472, 208);
+            btnFabricar.Location = new Point(628, 211);
             btnFabricar.Name = "btnFabricar";
             btnFabricar.Size = new Size(178, 57);
             btnFabricar.TabIndex = 4;
@@ -91,7 +91,7 @@
             // btnEliminar
             // 
             btnEliminar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEliminar.Location = new Point(472, 271);
+            btnEliminar.Location = new Point(628, 274);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(178, 57);
             btnEliminar.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(664, 348);
+            ClientSize = new Size(818, 348);
             Controls.Add(btnEliminar);
             Controls.Add(btnFabricar);
             Controls.Add(pcbFabrica);

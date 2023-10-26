@@ -30,9 +30,18 @@ namespace FrmView
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Vehiculo eliminarVehiculo = ((Vehiculo)this.lstVehiculos.SelectedItem);
-            this.fabrica -= eliminarVehiculo;
-            this.Refrescar();
+            if (this.lstVehiculos.SelectedItem != null)
+            {
+                Vehiculo eliminarVehiculo = ((Vehiculo)this.lstVehiculos.SelectedItem);
+                this.fabrica -= eliminarVehiculo;
+                this.Refrescar();
+
+                MessageBox.Show("Se elimino corractamente el vehiculo", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un vehiculo para eliminar.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void IniciciarFabricacion()
@@ -45,7 +54,7 @@ namespace FrmView
         {
             string tipo = this.cmbTipo.SelectedItem.ToString();
 
-            switch(tipo)
+            switch (tipo)
             {
                 case "Automovil":
                     return new Automovil();

@@ -47,6 +47,7 @@ namespace Entidades
                 if (item == v)
                 {
                     f.vehiculos.Remove(v);
+                    break;
                 }
             }
             return f;
