@@ -45,23 +45,25 @@ namespace Entidades
         /// <returns>Retorna una cadena de string</returns>
         protected virtual string GetInfor()
         {
-            StringBuilder sb = new StringBuilder();
+            //StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"{this.Tipo}");
-            sb.AppendLine($"con propulsión a {this.Propulsion}");
+            return string.Format($"{this.Tipo}, con propulsion a {this.Propulsion}, {this.esAWD} es AWD, numero de chasis {this.numeroChasis}");
 
-            if (this.esAWD)
-            {
-                sb.AppendLine("Es AWD,");
-            }
-            else
-            {
-                sb.AppendLine("No es AWD,");
-            }
+            //sb.appendline($"{this.tipo}");
+            //sb.appendline($"con propulsión a {this.propulsion}");
 
-            sb.AppendLine($"numero de chasis {this.numeroChasis}");
+            //if (this.esawd)
+            //{
+            //    sb.appendline("es awd,");
+            //}
+            //else
+            //{
+            //    sb.appendline("no es awd,");
+            //}
 
-            return sb.ToString();
+            //sb.appendline($"numero de chasis {this.numerochasis}");
+
+            //return sb.tostring();
         }
 
         /// <summary>
