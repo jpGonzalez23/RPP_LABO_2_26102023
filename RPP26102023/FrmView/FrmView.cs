@@ -32,10 +32,17 @@ namespace FrmView
         /// <param name="e"></param>
         private void btnFabricar_Click(object sender, EventArgs e)
         {
-            Vehiculo nuevoVehiculo = this.CrearVehiculo();
-
-            this.fabrica += nuevoVehiculo;
-            this.Refrescar();
+            if (this.lstVehiculos.SelectedItem != null)
+            {
+                //Vehiculo nuevoVehiculo = this.CrearVehiculo();
+                this.fabrica += this.CrearVehiculo();
+                //this.fabrica += nuevoVehiculo;
+                this.Refrescar();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un vehiculo", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -66,6 +73,7 @@ namespace FrmView
         {
             this.fabrica = new Fabrica(5);
             Camioneta camioneta = new Camioneta(EPropulsion.Electrica, true);
+            this.fabrica += camioneta;
         }
 
         /// <summary>

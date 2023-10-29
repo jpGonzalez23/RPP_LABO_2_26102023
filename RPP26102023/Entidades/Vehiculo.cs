@@ -15,7 +15,7 @@ namespace Entidades
         protected Vehiculo(EPropulsion propulsion) 
             : this(propulsion, false)
         {
-            this.propulsion = propulsion;
+            
         }
 
         /// <summary>
@@ -26,6 +26,7 @@ namespace Entidades
         protected Vehiculo(EPropulsion propulsion, bool esAWD)
         {
             this.esAWD = esAWD;
+            this.propulsion = propulsion;
             this.numeroChasis = Guid.NewGuid();
         }
 
@@ -47,7 +48,7 @@ namespace Entidades
         {
             //StringBuilder sb = new StringBuilder();
 
-            return string.Format($"{this.Tipo}, con propulsion a {this.Propulsion}, {this.esAWD} es AWD, numero de chasis {this.numeroChasis}");
+            return string.Format($"{this.Tipo}, con propulsion a {this.Propulsion}, {(this.esAWD ? "es 4x4" : "no es 4x4")}, numero de chasis {this.numeroChasis}");
 
             //sb.appendline($"{this.tipo}");
             //sb.appendline($"con propulsión a {this.propulsion}");
